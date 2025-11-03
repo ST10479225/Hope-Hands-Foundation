@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Hope Hands Foundation - find our location, operating hours, and send us a message.">
+    <title>Contact Us - Hope Hands Foundation | Get In Touch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="_images/OIP.webp" alt="Hope Hands Foundation Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li class="active">Contact Us</li>
+                <li><a href="enquiry.html">Enquire</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Contact Hope Hands Foundation</h1>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                <p><strong>Physical Address:</strong> 123 Hope Street, Johannesburg, 2000</p>
+                <p><strong>Email Address:</strong> info@hopehands.org.za</p>
+                <p><strong>Contact Number:</strong> 076 485 7695</p>
+                
+                <h2>Operational Hours</h2>
+                <div class="hours">
+                    <p><strong>Monday - Thursday:</strong> 8am - 5pm</p>
+                    <p><strong>Friday:</strong> 8am - 5pm</p>
+                    <p><strong>Saturday:</strong> 8am - 3pm</p>
+                    <p><strong>Sunday:</strong> 8am - 12pm</p>
+                </div>
+                
+                <div id="map"></div>
+            </div>
+            
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="contactName">Full Name *</label>
+                        <input type="text" id="contactName" name="contactName" required minlength="2">
+                        <span class="error-message" id="contactNameError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactEmail">Email Address *</label>
+                        <input type="email" id="contactEmail" name="contactEmail" required>
+                        <span class="error-message" id="contactEmailError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Please select</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="donation">Donation Question</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-message" id="subjectError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactMessage">Message </label>
+                        <textarea id="contactMessage" name="contactMessage" rows="5" required minlength="10"></textarea>
+                        <span class="error-message" id="contactMessageError"></span>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+                
+                <div id="contactResponse" class="hidden">
+                    <h3>Message Sent Successfully!</h3>
+                    <p>Thank you for contacting us. We'll respond to your message as soon as possible.</p>
+                    <button id="sendAnother" class="btn-secondary">Send Another Message</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Hope Hands Foundation. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

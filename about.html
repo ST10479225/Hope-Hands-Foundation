@@ -1,67 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Hope Hands Foundation - our mission, vision, and work helping the homeless and disadvantaged in Johannesburg since 2015.">
+    <title>About Us - Hope Hands Foundation | Helping the Homeless</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="_images/OIP.webp" alt="Hope Hands Foundation">
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><span class="active">About</span></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <img src="_images/OIP.webp" alt="Hope Hands Foundation Logo - Helping the Homeless">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active">About</li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="enquiry.html">Enquire</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>About Hope Hands Foundation</h1>
+        <p>Welcome to Hope Hands Foundation, founded in 2015 in Johannesburg. We are a community-based charity offering shelter, food, and job training for the homeless and disadvantaged. We began with giving food to the homeless and now operate two community centres and weekly outreach programs.</p>
 
-  <main>
-    <h1>Hope Hands Foundation</h1>
-    <p>
-      Founded in 2015 in Johannesburg, Hope Hands Foundation is a community-based charity offering shelter, food, 
-      and job training for the homeless and disadvantaged. The organization began with food outreach for the homeless and now 
-      operates two community centres and weekly outreach programs.
-    </p>
+        <div class="search-filter-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search programs and services...">
+                <button id="searchBtn">Search</button>
+            </div>
+            
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="categoryFilter">Filter by Category:</label>
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="programs">Programs</option>
+                        <option value="services">Services</option>
+                        <option value="impact">Impact Stories</option>
+                        <option value="team">Our Team</option>
+                        <option value="partners">Partners</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="sortBy">Sort by:</label>
+                    <select id="sortBy">
+                        <option value="name">Name (A-Z)</option>
+                        <option value="name-desc">Name (Z-A)</option>
+                        <option value="date">Date (Newest)</option>
+                        <option value="date-oldest">Date (Oldest)</option>
+                        <option value="relevance">Relevance</option>
+                    </select>
+                </div>
+                
+                <button id="resetFilters" class="btn-secondary">Reset Filters</button>
+            </div>
+        </div>
 
-    <h2>Mission Statement</h2>
-    <p>
-      To give back to the community and to be able to provide to those who cannot provide for themselves.
-    </p>
+        <div id="resultsCount" class="results-count"></div>
 
-    <h2>Vision Statement</h2>
-    <p>
-      A place where no one has to struggle for basic needs and a community where everyone is happy.
-    </p>
+        <div class="content-grid" id="contentGrid">
+        </div>
 
-    <h2>Target Audience</h2>
-    <ul>
-      <li>Homeless individuals in rural areas</li>
-      <li>Volunteers and donors</li>
-      <li>Local government and NGOs</li>
-    </ul>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-button">Mission Statement</button>
+                <div class="accordion-content">
+                    <p>To give back to the community and to be able to provide to those who cannot provide for themselves.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <button class="accordion-button">Vision Statement</button>
+                <div class="accordion-content">
+                    <p>A place where no one has to struggle for basic needs and to have a community where everyone is happy.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <button class="accordion-button">Target Audience</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Homeless individuals in rural areas</li>
+                        <li>Volunteers and donors</li>
+                        <li>Local government and NGOs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-    <h2>Website Goals and Objectives</h2>
+        <section>
+            <h2>Website Goals and Objectives</h2>
+            
+            <h3>Goals</h3>
+            <ul>
+                <li>Increase monthly donations by 50% within 6 months</li>
+                <li>Streamline volunteer sign-up and scheduling</li>
+                <li>Spread the word through posts and events</li>
+            </ul>
 
-    <h3>Goals</h3>
-    <ul>
-      <li>Increase monthly donations by 50% within 6 months</li>
-      <li>Streamline volunteer sign-up and scheduling</li>
-      <li>Spread awareness through posts and events</li>
-    </ul>
+            <h3>Key Performance Indicators (KPIs)</h3>
+            <ul>
+                <li>Online donations per month</li>
+                <li>New volunteer sign-ups</li>
+                <li>Vlog videos and social platforms</li>
+                <li>Bounce rate on homepage</li>
+            </ul>
+        </section>
 
-    <h3>Key Performance Indicators (KPIs)</h3>
-    <ul>
-      <li>Online donations per month</li>
-      <li>New volunteer sign-ups</li>
-      <li>Engagement on vlog videos and social media platforms</li>
-      <li>Bounce rate on homepage</li>
-    </ul>
-  </main>
+        <section class="map-section">
+            <h2>Our Locations</h2>
+            <p>Find our community centers and outreach locations across Johannesburg</p>
+            <div class="map-controls">
+                <button id="showAllLocations" class="btn-primary">Show All Locations</button>
+                <button id="findNearest" class="btn-secondary">Find Nearest Center</button>
+                <div class="location-search">
+                    <input type="text" id="locationSearch" placeholder="Search locations...">
+                    <button id="searchLocation">Search</button>
+                </div>
+            </div>
+            <div id="interactiveMap" class="interactive-map"></div>
+            <div id="locationInfo" class="location-info"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Hope Hands Foundation. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="map.js"></script>
 </body>
 </html>
-

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive map of Hope Hands Foundation locations and community centers in Johannesburg.">
+    <title>Our Locations - Hope Hands Foundation | Interactive Map</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        .fullscreen-map {
+            height: 80vh;
+            margin: 0;
+            border-radius: 0;
+        }
+        .map-page-header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .map-controls-panel {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem auto;
+            max-width: 1200px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="_images/OIP.webp" alt="Hope Hands Foundation Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="enquiry.html">Enquire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="map-page-header">
+        <h1>Our Locations</h1>
+        <p>Find Hope Hands Foundation centers and outreach locations across Johannesburg</p>
+    </div>
+
+    <main>
+        <div class="map-controls-panel">
+            <div class="map-controls-grid">
+                <div class="control-group">
+                    <label for="mapType">Map View:</label>
+                    <select id="mapType">
+                        <option value="streets">Streets</option>
+                        <option value="satellite">Satellite</option>
+                        <option value="hybrid">Hybrid</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="locationType">Location Type:</label>
+                    <select id="locationType">
+                        <option value="all">All Locations</option>
+                        <option value="center">Community Centers</option>
+                        <option value="outreach">Outreach Points</option>
+                        <option value="shelter">Shelters</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <button id="locateMe" class="btn-primary">
+                        <span class="locate-icon"></span> Find My Location
+                    </button>
+                </div>
+                <div class="control-group">
+                    <div class="search-group">
+                        <input type="text" id="addressSearch" placeholder="Enter address or area...">
+                        <button id="searchAddress" class="btn-secondary">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fullMap" class="fullscreen-map"></div>
+
+        <div class="locations-list">
+            <h2>All Locations</h2>
+            <div id="locationsContainer" class="locations-container">
+                <!-- Locations will be populated by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Hope Hands Foundation. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="map.js"></script>
+</body>
+</html>
